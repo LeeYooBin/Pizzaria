@@ -7,7 +7,7 @@ import Icons from "./icons";
 const Header = () => (
   <header className="px-4 lg:px-16 py-4 flex items-center">
     <Logo />
-    <nav className="ml-auto hidden space-x-8 lg:flex">
+    <nav className="ml-auto hidden space-x-8 md:flex">
       <Link className="text-2xl font-medium hover:text-primary" href="/">
         Home
       </Link>
@@ -16,6 +16,9 @@ const Header = () => (
       </Link>
       <Link className="text-2xl font-medium hover:text-primary" href="/about">
         About
+      </Link>
+      <Link className="text-2xl font-medium hover:text-primary" href="/about">
+        Contact
       </Link>
     </nav>
     <Icons />
