@@ -11,13 +11,16 @@ const Header = () => (
       <Link className="text-2xl font-medium hover:text-primary" href="/">
         Home
       </Link>
-      <Link className="text-2xl font-medium hover:text-primary" href="/menu">
+      <Link className="text-2xl font-medium hover:text-primary" href="/#menu">
         Menu
       </Link>
-      <Link className="text-2xl font-medium hover:text-primary" href="/about">
+      <Link className="text-2xl font-medium hover:text-primary" href="/#about">
         About
       </Link>
-      <Link className="text-2xl font-medium hover:text-primary" href="/about">
+      <Link
+        className="text-2xl font-medium hover:text-primary"
+        href="/#contact"
+      >
         Contact
       </Link>
     </nav>
