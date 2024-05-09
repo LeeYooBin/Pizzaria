@@ -61,6 +61,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     setIsLoggedIn(false);
     cookies.remove("isLoggedIn");
     cookies.remove("userData");
+    localStorage.removeItem("cart");
     redirect("/");
   };
 
