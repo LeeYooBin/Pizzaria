@@ -45,11 +45,9 @@ import veggie from "../../public/images/products/veggie.jpg";
 import whiteChocolate from "../../public/images/products/white-chocolate.jpg";
 import { Product } from "./@types/product";
 
-import { v4 as uuidv4 } from "uuid";
-
 const productData: Product[] = [
   {
-    id: uuidv4(),
+    id: "1",
     type: "pizza",
     name: "Peperoni pizza",
     info: "Cheese, oregano, and pepperoni.",
@@ -57,7 +55,7 @@ const productData: Product[] = [
     price: 26.99
   },
   {
-    id: uuidv4(),
+    id: "2",
     type: "pizza",
     name: "Margherita pizza",
     info: "Cheese, tomato, oregano, and basil.",
@@ -65,7 +63,7 @@ const productData: Product[] = [
     price: 27.75
   },
   {
-    id: uuidv4(),
+    id: "3",
     type: "pizza",
     name: "Four cheese pizza",
     info: "Cheese, cream cheese, gorgonzola, oregano, and grated parmesan.",
@@ -73,7 +71,7 @@ const productData: Product[] = [
     price: 32.99
   },
   {
-    id: uuidv4(),
+    id: "4",
     type: "pizza",
     name: "Vegetarian pizza",
     info: "Cheese, mushrooms, black olives, onion, oregano, and green bell pepper.",
@@ -81,7 +79,7 @@ const productData: Product[] = [
     price: 29.99
   },
   {
-    id: uuidv4(),
+    id: "5",
     type: "pizza",
     name: "Chicken with Cream Cheese Pizza",
     info: "Cheese, ham, quail egg, black olive, onion, oregano, and green bell pepper.",
@@ -89,7 +87,7 @@ const productData: Product[] = [
     price: 28.5
   },
   {
-    id: uuidv4(),
+    id: "6",
     type: "pizza",
     name: "Portuguese pizza",
     info: "Cheese, ham, quail egg, black olive, onion, oregano, and green bell pepper.",
@@ -97,7 +95,7 @@ const productData: Product[] = [
     price: 30
   },
   {
-    id: uuidv4(),
+    id: "7",
     type: "pizza",
     name: "Tuna pizza",
     info: "Cheese, onion, and tuna.",
@@ -105,7 +103,7 @@ const productData: Product[] = [
     price: 31.99
   },
   {
-    id: uuidv4(),
+    id: "8",
     type: "pizza",
     name: "Shrimp pizza",
     info: "Cheese, olive, tomato, bell pepper, and shrimp.",
@@ -113,7 +111,7 @@ const productData: Product[] = [
     price: 33.5
   },
   {
-    id: uuidv4(),
+    id: "9",
     type: "pizza",
     name: "Garlic pizza",
     info: "Cheese, garlic, and oregano.",
@@ -121,7 +119,7 @@ const productData: Product[] = [
     price: 26.99
   },
   {
-    id: uuidv4(),
+    id: "10",
     type: "pizza",
     name: "Mushroom pizza",
     info: "Cheese, oregano, olive, and mushroom.",
@@ -129,7 +127,7 @@ const productData: Product[] = [
     price: 30
   },
   {
-    id: uuidv4(),
+    id: "11",
     type: "pizza",
     name: "Ham pizza",
     info: "Cheese, oregano, and ham.",
@@ -137,7 +135,7 @@ const productData: Product[] = [
     price: 28.99
   },
   {
-    id: uuidv4(),
+    id: "12",
     type: "pizza",
     name: "Neapolitan pizza",
     info: "Cheese, tomato, oregano, and grated parmesan.",
@@ -145,7 +143,7 @@ const productData: Product[] = [
     price: 26.99
   },
   {
-    id: uuidv4(),
+    id: "13",
     type: "pizza",
     name: "Chicken with catupiry pizza",
     info: "Shredded chicken, onion, oregano, and catupiry cheese.",
@@ -153,7 +151,7 @@ const productData: Product[] = [
     price: 31.99
   },
   {
-    id: uuidv4(),
+    id: "14",
     type: "pizza",
     name: "Catuperony pizza",
     info: "Cheese, pepperoni, catupiry cheese, oregano, and grated parmesan.",
@@ -161,7 +159,7 @@ const productData: Product[] = [
     price: 29.99
   },
   {
-    id: uuidv4(),
+    id: "15",
     type: "dessert",
     name: "Brigadeiro pizza",
     info: "Vanilla cream, chocolate brigadeiro, cherries, and sprinkles.",
@@ -169,7 +167,7 @@ const productData: Product[] = [
     price: 21.99
   },
   {
-    id: uuidv4(),
+    id: "16",
     type: "dessert",
     name: "Churros pizza",
     info: "Dulce de leche, sugar, and cinnamon.",
@@ -177,7 +175,7 @@ const productData: Product[] = [
     price: 20.99
   },
   {
-    id: uuidv4(),
+    id: "17",
     type: "dessert",
     name: "Banana with Cinnamon pizza",
     info: "Banana, cinnamon, condensed milk, and mozzarella.",
@@ -185,7 +183,7 @@ const productData: Product[] = [
     price: 19.99
   },
   {
-    id: uuidv4(),
+    id: "18",
     type: "dessert",
     name: "Marbled piza",
     info: "Milk chocolate and white chocolate.",
@@ -193,7 +191,7 @@ const productData: Product[] = [
     price: 22.5
   },
   {
-    id: uuidv4(),
+    id: "19",
     type: "dessert",
     name: "Chocolate pizza",
     info: "Vanilla cream, milk chocolate, and chocolate sprinkles.",
@@ -201,7 +199,7 @@ const productData: Product[] = [
     price: 21.99
   },
   {
-    id: uuidv4(),
+    id: "20",
     type: "dessert",
     name: "Hazelnut pizza",
     info: "Hazelnut cream, condensed milk, and strawberries.",
@@ -209,7 +207,7 @@ const productData: Product[] = [
     price: 25
   },
   {
-    id: uuidv4(),
+    id: "21",
     type: "dessert",
     name: "White chocolate pizza",
     info: "White chocolate and strawberries.",
@@ -217,7 +215,7 @@ const productData: Product[] = [
     price: 21.99
   },
   {
-    id: uuidv4(),
+    id: "22",
     type: "dessert",
     name: "Banana pizza",
     info: "Dulce de leche and bananas.",
@@ -225,7 +223,7 @@ const productData: Product[] = [
     price: 22.5
   },
   {
-    id: uuidv4(),
+    id: "23",
     type: "dessert",
     name: "Romeu and Juliet pizza",
     info: "Guava paste, mozzarella, and cinnamon.",
@@ -233,7 +231,7 @@ const productData: Product[] = [
     price: 23.5
   },
   {
-    id: uuidv4(),
+    id: "24",
     type: "side",
     name: "French fries",
     info: "Fried potatoes and sauces.",
@@ -241,7 +239,7 @@ const productData: Product[] = [
     price: 9.99
   },
   {
-    id: uuidv4(),
+    id: "25",
     type: "side",
     name: "French Fries with bacon",
     info: "French fries, bacon, cheddar, and sauces.",
@@ -249,7 +247,7 @@ const productData: Product[] = [
     price: 13.99
   },
   {
-    id: uuidv4(),
+    id: "26",
     type: "side",
     name: "Mixed salad",
     info: "Fruits, green leaves, and vegetables.",
@@ -257,7 +255,7 @@ const productData: Product[] = [
     price: 8.99
   },
   {
-    id: uuidv4(),
+    id: "27",
     type: "side",
     name: "Toasts",
     info: "Ham pate and toasted bread.",
@@ -265,7 +263,7 @@ const productData: Product[] = [
     price: 11.99
   },
   {
-    id: uuidv4(),
+    id: "28",
     type: "side",
     name: "Peanuts",
     info: "Salted roasted peanuts.",
@@ -273,7 +271,7 @@ const productData: Product[] = [
     price: 10
   },
   {
-    id: uuidv4(),
+    id: "29",
     type: "side",
     name: "Chili",
     info: "Red beans, minced meat, and tomato paste.",
@@ -281,7 +279,7 @@ const productData: Product[] = [
     price: 15.99
   },
   {
-    id: uuidv4(),
+    id: "30",
     type: "side",
     name: "Fried chicken",
     info: "Chicken wings and legs.",
@@ -289,7 +287,7 @@ const productData: Product[] = [
     price: 17.99
   },
   {
-    id: uuidv4(),
+    id: "31",
     type: "side",
     name: "Cheeseburger",
     info: "Hamburger patty, lettuce, tomato, onion, pickles, and cheddar sauce.",
@@ -297,7 +295,7 @@ const productData: Product[] = [
     price: 12.99
   },
   {
-    id: uuidv4(),
+    id: "32",
     type: "side",
     name: "Double cheeseburger",
     info: "Double hamburger patty, lettuce, tomato, onion, pickles, and cheddar sauce.",
@@ -305,91 +303,91 @@ const productData: Product[] = [
     price: 16.99
   },
   {
-    id: uuidv4(),
+    id: "33",
     type: "drink",
     name: "Coke",
     img: coke,
     price: 4.99
   },
   {
-    id: uuidv4(),
+    id: "34",
     type: "drink",
     name: "Zero coke",
     img: coke_2,
     price: 4.99
   },
   {
-    id: uuidv4(),
+    id: "35",
     type: "drink",
     name: "Fanta",
     img: fanta,
     price: 3.99
   },
   {
-    id: uuidv4(),
+    id: "36",
     type: "drink",
     name: "Water",
     img: water,
     price: 1.5
   },
   {
-    id: uuidv4(),
+    id: "37",
     type: "drink",
     name: "Sparkling water",
     img: water_2,
     price: 2.5
   },
   {
-    id: uuidv4(),
+    id: "38",
     type: "drink",
     name: "Schweppes Citrus",
     img: citrus,
     price: 2.5
   },
   {
-    id: uuidv4(),
+    id: "39",
     type: "drink",
     name: "Natural mate",
     img: mate_1,
     price: 3
   },
   {
-    id: uuidv4(),
+    id: "40",
     type: "drink",
     name: "Lemon mate",
     img: mate_2,
     price: 3
   },
   {
-    id: uuidv4(),
+    id: "41",
     type: "drink",
     name: "Heineken",
     img: heineken,
     price: 5
   },
   {
-    id: uuidv4(),
+    id: "42",
     type: "drink",
     name: "Amstel",
     img: amstel,
     price: 5
   },
   {
-    id: uuidv4(),
+    id: "43",
     type: "drink",
     name: "Red bull",
     img: rb_1,
     price: 5
   },
   {
-    id: uuidv4(),
+    id: "44",
     type: "drink",
     name: "Red bull sugarfree",
     img: rb_2,
     price: 5
   },
   {
-    id: uuidv4(),
+    id: "45",
     type: "drink",
     name: "Red bull tropical",
     img: rb_3,
