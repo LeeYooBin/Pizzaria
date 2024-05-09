@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import Skeletons from "./skeletons";
@@ -6,10 +7,13 @@ import Skeletons from "./skeletons";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Product } from "data/@types/product";
+import { useCart } from "data/context/cartContext";
 import { useProducts } from "data/context/ProductContext";
 
 const Trends = () => {
   const products = useProducts();
+  const { addToCart } = useCart();
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [trends, setTrends] = useState<Product[]>([]);
 
@@ -23,6 +27,11 @@ const Trends = () => {
   if (loading) {
     return <Skeletons />;
   }
+
+  const handleClick = (product: Product) => {
+    addToCart(product);
+    router.push("/cart");
+  };
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -42,7 +51,7 @@ const Trends = () => {
               <p className="text-gray-500 text-xl">{product.info}</p>
               <div className="flex justify-center">
                 <Button
-                  onClick={() => console.log("Click")}
+                  onClick={() => handleClick(product)}
                   size="sm"
                   className="text-xl text-white p-6 border-none"
                 >

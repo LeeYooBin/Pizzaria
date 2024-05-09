@@ -7,6 +7,7 @@ import Header from "components/Header";
 import ProductsMenu from "components/productsMenu";
 import SelectMenu from "components/SelectMenu";
 
+import { CartProvider } from "data/context/cartContext";
 import { ProductProvider } from "data/context/ProductContext";
 
 const Menu = () => {
@@ -16,9 +17,11 @@ const Menu = () => {
     <main>
       <Header />
       <SelectMenu setSelectedCategory={setSelectedCategory} />
-      <ProductProvider>
-        <ProductsMenu productType={selectedCategory} />
-      </ProductProvider>
+      <CartProvider>
+        <ProductProvider>
+          <ProductsMenu productType={selectedCategory} />
+        </ProductProvider>
+      </CartProvider>
       <Footer />
     </main>
   );

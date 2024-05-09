@@ -1,17 +1,25 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
 import DropMenu from "./dropdown-menu";
 
 import { Button } from "@/components/ui/button";
 import { AuthProvider } from "data/context/authContext";
 import { useAuth } from "data/context/authContext";
+import { CartProvider, useCart } from "data/context/cartContext";
 import { UserIcon, ShoppingCartIcon } from "lucide-react";
 
 const Icons = () => {
   const { isLoggedIn } = useAuth();
+  const { totalItems } = useCart();
+  const [total, setTotal] = useState<number>(0);
   const router = useRouter();
+
+  useEffect(() => {
+    setTotal(totalItems);
+  }, [totalItems]);
 
   const handleUserButton = () => {
     if (isLoggedIn) router.push("/user");
@@ -40,9 +48,11 @@ const Icons = () => {
       >
         <span className="sr-only">Cart</span>
         <ShoppingCartIcon className="h-7 w-7" />
-        <div className="w-10 h-8 flex justify-center items-center rounded-full border bg-black text-lg text-white font-semibold translate-x-3">
-          3
-        </div>
+        {total > 0 && (
+          <div className="w-10 h-8 flex justify-center items-center rounded-full border bg-black text-lg text-white font-semibold translate-x-3">
+            {total}
+          </div>
+        )}
       </Button>
       <DropMenu />
     </div>
@@ -51,7 +61,9 @@ const Icons = () => {
 
 const Wrapper = () => (
   <AuthProvider>
-    <Icons />
+    <CartProvider>
+      <Icons />
+    </CartProvider>
   </AuthProvider>
 );
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 import Skeletons from "./skeletons";
@@ -6,6 +7,7 @@ import Skeletons from "./skeletons";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Product } from "data/@types/product";
+import { useCart } from "data/context/cartContext";
 import { useProducts } from "data/context/ProductContext";
 
 interface ProductsMenuProps {
@@ -14,6 +16,8 @@ interface ProductsMenuProps {
 
 const ProductsMenu = ({ productType }: ProductsMenuProps) => {
   const products = useProducts();
+  const { addToCart } = useCart();
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
@@ -23,6 +27,11 @@ const ProductsMenu = ({ productType }: ProductsMenuProps) => {
     );
     setLoading(false);
   }, [products, productType]);
+
+  const handleClick = (product: Product) => {
+    addToCart(product);
+    router.push("/cart");
+  };
 
   if (loading) {
     return <Skeletons />;
@@ -52,7 +61,11 @@ const ProductsMenu = ({ productType }: ProductsMenuProps) => {
               </p>
               <div className="h-auto flex items-center justify-between text-2xl">
                 <span className="font-bold">${product.price}</span>
-                <Button size="sm" className="text-white text-xl p-6">
+                <Button
+                  onClick={() => handleClick(product)}
+                  size="sm"
+                  className="text-white text-xl p-6"
+                >
                   Add to cart
                 </Button>
               </div>

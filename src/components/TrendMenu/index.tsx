@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import Trends from "./trends";
 
+import { CartProvider } from "data/context/cartContext";
 import { ProductProvider } from "data/context/ProductContext";
 
 const TrendMenu = () => (
@@ -19,9 +20,11 @@ const TrendMenu = () => (
         Explore our selection of delicious, hand-crafted pizzas.
       </p>
     </div>
-    <ProductProvider>
-      <Trends />
-    </ProductProvider>
+    <CartProvider>
+      <ProductProvider>
+        <Trends />
+      </ProductProvider>
+    </CartProvider>
     <div className="text-center">
       <Link
         href="/menu"
