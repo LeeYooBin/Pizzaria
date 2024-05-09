@@ -5,6 +5,7 @@ export interface User {
   name: string;
   email: string;
   password: string;
+  cart?: Record<string, number>;
   orders: Order[];
   createdAt: Date;
 }
